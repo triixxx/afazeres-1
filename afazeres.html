@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu{
+            background-color: pink;
+            text-align: center;
+            padding: 10px;
+        }
+          .itens{
+            background-color: lightpink;
+            width: 40%;
+            text-align: center;
+            margin-top: 15px;
+            margin-left: 30%;
+        
+    }
+            .itens button{
+            }
+    </style>
+</head>
+<body>
+    <div id="menu">
+    <h1>Lista de afazeres</h1>
+    <input id="texto">
+    <button onclick="adicionar();">
+    adicionar
+    </button>
+</div>
+    
+    
+    <script>
+        
+        function adicionar() {
+            const divNova = document.createElement('div');
+            divNova.className="itens";
+            const h2Nova = document.createElement('h2');
+            const texto = document.getElementById('texto').value;
+            h2Nova.innerHTML = texto;
+            const btRiscar = document.createElement('input');
+            btRiscar.setAttribute('type','checkbox');
+            btRiscar.addEventListener('click', function(){
+            h2Nova.style.textDecoration = "line-through";
+            divNova.style.opacity = "50%"
+            btRiscar.disabled = true;
+            })
+            divNova.appendChild(btRiscar);
+
+            divNova.appendChild(h2Nova);
+            document.body.appendChild(divNova);
+
+            const btDeletar = document.createElement('button');
+            btDeletar.innerHTML = "Deletar";
+            btDeletar.addEventListener('click', function(){
+                divNova.remove();
+            })
+            divNova.appendChild(btDeletar);
+
+            
+
+        }
+    
+            
+
+    </script>
+</body>
+</html>
