@@ -17,6 +17,9 @@
             text-align: center;
             margin-top: 15px;
             margin-left: 30%;
+            border-style: solid;
+            border-color: darkmagenta;
+            border-radius: 25px;
         
     }
             .itens button{
@@ -43,10 +46,12 @@
             h2Nova.innerHTML = texto;
             const btRiscar = document.createElement('input');
             btRiscar.setAttribute('type','checkbox');
+            h2Nova.style.textDecoration = "underline";
             btRiscar.addEventListener('click', function(){
             h2Nova.style.textDecoration = "line-through";
             divNova.style.opacity = "50%"
             btRiscar.disabled = true;
+            btDeletar.innerHTML = "Concluído";
             })
             divNova.appendChild(btRiscar);
 
