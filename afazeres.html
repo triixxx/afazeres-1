@@ -4,37 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista</title>
     <style>
+
+        body{
+            background-color: rgb(250, 246, 191);
+        }
+
+        .lista{
+            background-color: rgb(205, 135, 233);
+            margin: 10px;
+            margin-bottom: 40px;
+            margin-top: 30px;
+            text-align: center;
+            border-style: solid;
+            border-color: darkmagenta;
+            border-radius: 25px;
+        }
         #menu{
             background-color: pink;
-            text-align: center;
             padding: 10px;
+            height: 80px;
+           
+        }
+
+
+        .item-concluido{
+
+
         }
           .itens{
+              text-align: center;
             background-color: lightpink;
             width: 40%;
-            text-align: center;
-            margin-top: 15px;
+            margin-top:3%;
             margin-left: 30%;
             border-style: solid;
             border-color: darkmagenta;
             border-radius: 25px;
+            
         
     }
-            .itens button{
-            }
+    .navbar {
+        
+  overflow: hidden;
+  background-color: rgba(212, 61, 132, 0.877);
+  width: 100px;
+  margin-left: 47%;
+  text-align: center;
+}
+
+.navbar a {
+    
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+.navbar a:hover{
+  background-color: rgba(230, 119, 183, 0.685);
+}
     </style>
 </head>
 <body>
-    <div id="menu">
-    <h1>Lista de afazeres</h1>
-    <input id="texto">
-    <button onclick="adicionar();">
-    adicionar
-    </button>
-</div>
     
+    <div id="menu">
+        <div class="navbar">
+            <a href="#home">Lista de afazeres</a>
+        </div>
+    </div>
+        <div class="lista">
+            <h1>Lista de afazeres</h1>
+            <input id="texto">
+            <button onclick="adicionar();">
+                adicionar
+            </button>
+        </div>
+    
+
+
+
+
     
     <script>
         
@@ -51,7 +104,8 @@
             h2Nova.style.textDecoration = "line-through";
             divNova.style.opacity = "50%"
             btRiscar.disabled = true;
-            btDeletar.innerHTML = "Concluído";
+            btDeletar.style.opacity = "100%";
+            
             })
             divNova.appendChild(btRiscar);
 
