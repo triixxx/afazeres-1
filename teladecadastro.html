@@ -41,11 +41,38 @@
 }
 
 .card-cadastro{
+    justify-content: space-between;
     padding: 10px;
-    width: 60%;
-    height: 400px; 
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 50%;
+    height: 550px; 
     justify-content: center;
     background-color: rgba(212, 61, 132, 0.877);
+    margin-top: 10px;
+    margin-left: 23%;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: darkmagenta;
+    text-align: center;
+}
+.card-cadastro button{
+    width: 100px;
+    height: 40px;
+}
+.card-cbcl{
+    padding-top: 10px;
+    background-color: darkmagenta;
+    border-radius: 25px;
+    height: 18%;
+}
+.infos{
+    padding: 10px;
+    background-color: rgba(230, 119, 183, 0.685);
+    width: 200px;
+    margin-left: 35%;
+    margin-top: 10px;
 }
     </style>
 </head>
@@ -53,24 +80,33 @@
     
     <div id="menu">
         <div class="navbar">
-            <a href="#home">Lista de afazeres</a>
+            <a href="#home">Cadastro</a>
         </div>
     </div>
 
     <div class="card-cadastro">
-        <span>Nome: </span>
-        <input type="text">
+        <div class="card-cbcl">
+            <h1>Informações</h1>
+        </div>
+        <div class="infos">
+        <p>Nome (min 10 caracteres): </p>
+        <input type="text" id="nome">
         <br>
-        <span>Login: </span>
-        <input type="text">
+        <p>Login (max 10 caracteres): </p>
+        <input type="text" id="login">
         <br>
-        <span>Email: </span>
-        <input type="email">
+        <p>Email: </p>
+        <input type="email" id="email">
         <br>
-        <span>Senha: </span>
-        <input type="text">
+        <p>Senha: </p>
+        <input type="text" id="senha">
         <br>
-        <button>Login</button>
+        <p>Confirmar senha: </p>
+        <input type="text" id="confSenha">
+        <br>
+        <br>
+        <button onclick="window.location.href='.html'">Login</button>
+        </div>
     </div>
  
     <script>
