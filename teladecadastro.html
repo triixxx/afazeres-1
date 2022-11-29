@@ -105,12 +105,28 @@
         <input type="text" id="confSenha">
         <br>
         <br>
-        <button onclick="window.location.href='.html'">Login</button>
+        <button onclick="window.location.href='.html'" id="botSalvar">Login</button>
         </div>
     </div>
  
     <script>
+        var nome = document.getElementById('nome').value;
+        var login = document.getElementById('login').value;
+        var email = document.getElementById('email').value;
+        var senha = document.getElementById('senha').value;
+        var confSenha = document.getElementById('confSenha').value;
+        const botSalvar = document.getElementById('botSalvar');
 
+    
+            if(nome.length < 10){
+                botSalvar.disabled = true;
+            }else if(nome.value===""){
+                botSalvar.disabled = true;
+            }else{
+                botSalvar.disabled = false;
+            }
+
+           
     </script>
 </body>
 </html>
